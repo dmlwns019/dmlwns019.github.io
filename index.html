@@ -1,0 +1,73 @@
+---
+title: Nathan Oh
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Oh</title>
+    <link rel="stylesheet" href="/globalStyle.css">
+    <link rel="stylesheet" href="/styleSheets/indexStyle.css">
+
+    <!-- fonts boiii   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    
+</head>
+<body class="grid-bg">
+    <nav class="navbar">
+  <!-- Website Logo -->
+  <div class="logo serif">Nathan Oh -- dmlwns019</div>
+  
+  <!-- Navigation Links -->
+  <ul class="nav-links sans-serif">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+</nav>
+    <div class = "Introduction">
+        <div class="introText">
+            <h1 class="serif" style = "font-size: 60px; margin-bottom: 70px; margin-top: 80px; text-align: center;">Hi, I'm Nathan.</h1>
+            <h3 class="sans-serif" style="font-size: 25px; margin-bottom: 0px; text-align: center;">I'm a Korean-Canadian student who enjoys turning curiosity into things that exist, from modular engineering toolkits to writing-system practice softwares and experimental programming languages.</h3>
+        </div>
+        <img src="baseWebsiteImages/placeholder.jpg" alt="Intro Image" style="width: 400px; height: auto;">
+    </div>
+    <div class="divider">
+        <img src="baseWebsiteImages/quickdivider.png" alt="Divider" style="width: 60%; height: auto; margin-top: 0px; margin-bottom: 0px;">
+        </div>
+    <div class="WorkingOn">
+        <h1 class="serif" style="font-size: 45px; margin-bottom: 30px; text-align: center;">What I'm Working On Currently</h1>
+        <div class="toastIntroduction">
+            <img src="baseWebsiteImages/toastBoardIntroImage.png" alt="ToastBoard Image" style="width: 650px; height: auto; margin: 50px;" align="center">
+            <div class="toastIntroText" style="margin-right: 100px;">
+               <h2 class="sans-serif" style="font-size: 38px; text-align: center;">ToastBoard</h2>
+                <h2 class="sans-serif" style="font-size: 20px; text-align: center;">Toastboard is a smart modular breadboard, microcontroller, and component system aimed at helping primary school kids understand electronic engineering in a visual way. Like puzzle pieces, Toastboard modules click together to create breadboard-like systems. One Toastboard module contains a microcontroller and an RGB LED allowing signals to be intuitively communicated through colors. Special components are also designed, such as servo motors, LEDs, sensors, and relays to aid children in learning electrical engineering.</h2>
+            </div>
+        </div>
+    </div>
+        <div class="divider">
+        <img src="baseWebsiteImages/quickdivider.png" alt="Divider" style="width: 60%; height: auto; margin-top: 0px; margin-bottom: 0px;">
+        </div>
+
+        <h1 class="serif" style="font-size: 45px; margin-bottom: 30px; text-align: center;">My Latest Journal Entry</h1>
+
+        <div class="latestJournal">
+        {% assign latest = site.journals | sort: "date" | reverse | first %}
+
+    <a class="card" href="{{ latest.url }}">
+      <img src="{{ latest.thumbnail }}">
+      <h2>{{ latest.title }}</h2>
+     <p>{{ latest.description }}</p>
+    </a>
+    </div>
+</body>
+
+</html>

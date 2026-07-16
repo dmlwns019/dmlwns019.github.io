@@ -1,0 +1,60 @@
+---
+title: Journal
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="/globalStyle.css">
+    <link rel="stylesheet" href="/styleSheets/journalsStyle.css">
+
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+  </head>
+  <body class="grid-bg">
+    <nav class="navbar">
+  <div class="logo serif">Nathan Oh -- dmlwns019</div>
+  
+
+  <ul class="nav-links sans-serif">
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/journal.html" class="active">Journal</a></li>
+    <li><a href="/projects.html">Projects</a></li>
+  </ul>
+</nav>
+  <div class="journalDef">
+    <h1 class="serif" style = "font-size: 60px; margin-bottom: 30px; margin-top: 100px; text-align: center;">Journal</h1>
+   <h3 class="sans-serif" style="font-size: 25px; margin-bottom: 40px; text-align: center;">Nathan's Global Engineering Journal</h3>
+  <div class="divider">
+    <img src="baseWebsiteImages/quickdivider.png" alt="Divider" style="width: 60%; height: auto; margin-top: 0px; margin-bottom: 0px;">
+  </div>
+  </div>
+
+
+  <div class="journal-grid">
+
+  {% for journal in site.journals %}
+
+  <a class="card" href="{{ journal.url }}">
+
+  <img src="{{ journal.thumbnail }}">
+
+  <h2>{{ journal.title }}</h2>
+
+  <p>{{ journal.description }}</p>
+
+  </a>
+
+  {% endfor %}
+
+  </div>
+  
+</body>
+</html> 

@@ -1,0 +1,21 @@
+.blog {
+    max-width: 800px;
+    margin: 0 auto;      
+    text-align: center;  
+}
+
+.blog img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blog h1 {
+    font-size: 50px;
+    align-items: center;
+}
+
+.blog p {
+    font-size: 20px;
+    line-height: 1.8;
+    align-items: center;
+}
