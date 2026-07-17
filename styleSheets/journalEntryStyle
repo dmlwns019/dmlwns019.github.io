@@ -19,3 +19,27 @@
     line-height: 1.8;
     align-items: center;
 }
+.journalEntry{
+    text-align: center;
+    font-size : 1.8em;
+}
+
+.journalEntry h1 {
+    font-size: 1.8em;
+}
+
+.journalEntry h2 {
+    font-size: 1.8em;
+}
+
+.journalEntry h3 {
+    font-size: 1.8em;
+}
+
+.journalEntry p,
+.journalEntry li,
+.journalEntry blockquote,
+.journalEntry td,
+.journalEntry th {
+    font-size: 1.8em;
+}
