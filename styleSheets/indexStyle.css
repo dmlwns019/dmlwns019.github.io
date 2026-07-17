@@ -47,3 +47,10 @@
     padding: 16px;
     border-top: 2px solid black;
 }
+
+.hover_lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover_lift:hover {
+    transform: translateY(-4px); 
+}
